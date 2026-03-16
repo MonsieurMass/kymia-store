@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KYMIA® — À chacun sa couronne</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="crown-cursor">♛</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-location">PARIS · FRANCE</div>
+  <div class="nav-logo" id="nav-logo">
+    <span>K</span><span>Y</span><span>M</span><span>I</span><span>A</span>
+  </div>
+  <div class="nav-cart">PANIER <span id="cart-count">0</span></div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>KYMIA® PARIS</span><span>·</span>
+    <span>DROP 001 — THE CAPS</span><span>·</span>
+    <span>ÉDITION LIMITÉE</span><span>·</span>
+    <span>À CHACUN SA COURONNE</span><span>·</span>
+    <span>STREETWEAR VISIONNAIRE</span><span>·</span>
+    <span>KYMIA® PARIS</span><span>·</span>
+    <span>DROP 001 — THE CAPS</span><span>·</span>
+    <span>ÉDITION LIMITÉE</span><span>·</span>
+    <span>À CHACUN SA COURONNE</span><span>·</span>
+    <span>STREETWEAR VISIONNAIRE</span><span>·</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left reveal">
+    <p class="label">Drop 001 · Édition Limitée</p>
+    <h1 class="hero-title">À<br>Chacun<br>Sa<br><span class="green">Couronne.</span></h1>
+    <p class="hero-sub">Les rois portaient des couronnes.<br>La rue porte des casquettes.<br>Alors on a fait les deux.</p>
+    <div class="hero-actions">
+      <button class="btn-main" onclick="document.getElementById('avatars').scrollIntoView({behavior:'smooth'})">Essayer ↓</button>
+      <span class="price">30,00 €</span>
+    </div>
+    <p class="drag-hint">⟲ Glisse la casquette pour la faire tourner</p>
+  </div>
+
+  <div class="hero-right reveal">
+    <div id="cap-stage">
+      <div id="cap-3d">
+        <svg id="cap-svg" viewBox="0 0 300 240" width="290" height="235" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="csh" cx="38%" cy="32%" r="62%">
+              <stop offset="0%" stop-color="rgba(255,255,255,.22)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,.08)"/>
+            </radialGradient>
+          </defs>
+          <path id="capBody"  d="M42 155 C42 82,88 38,150 38 C212 38,258 82,258 155Z" fill="#2B4B8C"/>
+          <path id="capBrim1" d="M42 155 Q150 172 258 155 L262 164 Q150 183 38 164Z"   fill="#1E3567"/>
+          <path id="capBrim2" d="M38 164 Q150 183 262 164 Q278 164 282 175 Q150 200 18 175 Q22 164 38 164Z" fill="#172B55"/>
+          <path d="M42 155 C42 82,88 38,150 38 C212 38,258 82,258 155Z" fill="url(#csh)"/>
+          <circle cx="150" cy="42" r="7" fill="#D4B896"/>
+          <text x="150" y="130" text-anchor="middle" fill="white" font-size="52" font-weight="bold" font-family="Georgia,serif" letter-spacing="-3">LA</text>
+          <!-- perles gauche -->
+          <circle cx="88" cy="108" r="5.5" fill="#F5EDD6"/>
+          <circle cx="88" cy="120" r="5.5" fill="#F5EDD6"/>
+          <circle cx="80" cy="114" r="5.5" fill="#F5EDD6"/>
+          <circle cx="96" cy="114" r="5.5" fill="#F5EDD6"/>
+          <circle cx="88" cy="114" r="5"   fill="#EDE4CC"/>
+          <!-- croix gauche -->
+          <rect x="66" y="85" width="5" height="16" rx="2" fill="rgba(255,255,255,.75)"/>
+          <rect x="61" y="90" width="15" height="5" rx="2" fill="rgba(255,255,255,.75)"/>
+          <!-- fleur or droite -->
+          <circle cx="212" cy="108" r="5.5" fill="#F5EDD6"/>
+          <circle cx="212" cy="120" r="5.5" fill="#F5EDD6"/>
+          <circle cx="204" cy="114" r="5.5" fill="#F5EDD6"/>
+          <circle cx="220" cy="114" r="5.5" fill="#F5EDD6"/>
+          <circle cx="212" cy="114" r="6"   fill="#C4A44A"/>
+          <!-- brillants -->
+          <circle cx="118" cy="72" r="2.5" fill="rgba(255,255,255,.85)"/>
+          <circle cx="183" cy="76" r="2.5" fill="rgba(255,255,255,.85)"/>
+          <circle cx="150" cy="65" r="1.8" fill="rgba(255,255,255,.65)"/>
+        </svg>
+      </div>
+    </div>
+    <p class="cap-hint">Glisse pour pivoter · Drag to rotate</p>
+
+    <!-- COLOR PICKER -->
+    <div class="color-picker">
+      <span class="color-label">Coloris :</span>
+      <div class="color-dot active" data-c="#2B4B8C" data-b1="#1E3567" data-b2="#172B55" data-n="SAPHIR"    style="background:#2B4B8C;" title="Saphir"></div>
+      <div class="color-dot"        data-c="#B83030" data-b1="#952020" data-b2="#7A1A1A" data-n="RUBIS"     style="background:#B83030;" title="Rubis"></div>
+      <div class="color-dot"        data-c="#1C3829" data-b1="#142B1E" data-b2="#0d1e15" data-n="ÉMERAUDE"  style="background:#1C3829;" title="Émeraude"></div>
+      <div class="color-dot"        data-c="#2C2C2A" data-b1="#1a1a18" data-b2="#111110" data-n="ONYX"      style="background:#2C2C2A;" title="Onyx"></div>
+    </div>
+    <p id="cap-name" class="cap-name">SAPHIR — 30,00 €</p>
+  </div>
+</section>
+
+<!-- AVATARS -->
+<section id="avatars" class="reveal">
+  <div class="section-header">
+    <p class="label">Essayage virtuel</p>
+    <h2 class="section-title">Quelle couronne<br>pour ton profil ?</h2>
+    <p class="section-sub">Sélectionne ton mannequin pour visualiser le rendu.</p>
+  </div>
+
+  <div class="av-grid">
+
+    <!-- Look 01 Locs -->
+    <div class="av-card" onclick="selectAv(0,this)">
+      <div class="av-figure">
+        <svg viewBox="0 0 90 200" width="90" height="200">
+          <rect x="32" y="118" width="26" height="55" rx="4" fill="#D4C5B0"/>
+          <rect x="14" y="118" width="14" height="40" rx="4" fill="#D4C5B0"/>
+          <rect x="62" y="118" width="14" height="40" rx="4" fill="#D4C5B0"/>
+          <path d="M24 105 Q45 115 66 105 L66 118 Q45 125 24 118Z" fill="#C8B89E"/>
+          <rect x="39" y="88" width="12" height="18" rx="3" fill="#C8A882"/>
+          <ellipse cx="45" cy="74" rx="18" ry="21" fill="#C8A882"/>
+          <path class="av-cap"  id="av0b"  d="M27 67 C27 50,34 43,45 43 C56 43,63 50,63 67Z" fill="#2B4B8C"/>
+          <path class="av-brim1" id="av0r1" d="M27 67 Q45 71 63 67 L65 70 Q45 75 25 70Z" fill="#1E3567"/>
+          <path class="av-brim2" id="av0r2" d="M25 70 Q45 75 65 70 Q70 70 71 73 Q45 79 19 73 Q20 70 25 70Z" fill="#172B55"/>
+          <circle cx="45" cy="45" r="3" fill="#D4B896"/>
+          <text x="45" y="63" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Georgia,serif">LA</text>
+          <path d="M27 65 Q18 80 20 100" stroke="#3D2A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M29 67 Q16 85 19 110" stroke="#4A3422" stroke-width="3"   fill="none" stroke-linecap="round"/>
+          <path d="M63 65 Q72 80 70 100" stroke="#3D2A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M61 67 Q74 85 71 110" stroke="#4A3422" stroke-width="3"   fill="none" stroke-linecap="round"/>
+          <path d="M35 67 Q30 90 32 115" stroke="#3D2A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M55 67 Q60 90 58 115" stroke="#3D2A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M40 67 Q36 95 37 120" stroke="#4A3422" stroke-width="2"   fill="none" stroke-linecap="round"/>
+          <path d="M50 67 Q54 95 53 120" stroke="#4A3422" stroke-width="2"   fill="none" stroke-linecap="round"/>
+          <ellipse cx="38" cy="78" rx="2" ry="1.5" fill="#1a0a00" opacity=".8"/>
+          <ellipse cx="52" cy="78" rx="2" ry="1.5" fill="#1a0a00" opacity=".8"/>
+          <path d="M39 85 Q45 89 51 85" stroke="#8B5030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="av-info">
+        <p class="av-role">Look 01</p>
+        <p class="av-name-card">Locs</p>
+      </div>
+    </div>
+
+    <!-- Look 02 Mannequin blanc -->
+    <div class="av-card" onclick="selectAv(1,this)">
+      <div class="av-figure">
+        <svg viewBox="0 0 90 200" width="90" height="200">
+          <rect x="34" y="120" width="22" height="58" rx="3" fill="#E8D5C0"/>
+          <rect x="16" y="120" width="11" height="42" rx="3" fill="#E8D5C0"/>
+          <rect x="63" y="120" width="11" height="42" rx="3" fill="#E8D5C0"/>
+          <path d="M26 108 Q45 118 64 108 L64 120 Q45 127 26 120Z" fill="#DEC9B2"/>
+          <rect x="40" y="92" width="10" height="17" rx="3" fill="#E0C8A8"/>
+          <ellipse cx="45" cy="78" rx="14" ry="19" fill="#F2E0C8"/>
+          <path class="av-cap"   id="av1b"  d="M31 71 C31 56,37 49,45 49 C53 49,59 56,59 71Z" fill="#2B4B8C"/>
+          <path class="av-brim1" id="av1r1" d="M31 71 Q45 74 59 71 L60 74 Q45 78 30 74Z" fill="#1E3567"/>
+          <path class="av-brim2" id="av1r2" d="M30 74 Q45 78 60 74 Q64 74 65 77 Q45 82 25 77 Q26 74 30 74Z" fill="#172B55"/>
+          <circle cx="45" cy="50" r="2.5" fill="#D4B896"/>
+          <text x="45" y="67" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="Georgia,serif">LA</text>
+          <path d="M31 70 Q24 95 26 140" stroke="#1C1008" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M59 70 Q66 95 64 140" stroke="#1C1008" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="40" cy="82" rx="1.8" ry="1.3" fill="#3C2820" opacity=".85"/>
+          <ellipse cx="50" cy="82" rx="1.8" ry="1.3" fill="#3C2820" opacity=".85"/>
+          <path d="M37 79 Q40 77 43 79" stroke="#2C1810" stroke-width="1.2" fill="none"/>
+          <path d="M47 79 Q50 77 53 79" stroke="#2C1810" stroke-width="1.2" fill="none"/>
+          <path d="M39 88 Q45 92 51 88" stroke="#C4756A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="35" cy="86" rx="3.5" ry="2" fill="#F0A090" opacity=".3"/>
+          <ellipse cx="55" cy="86" rx="3.5" ry="2" fill="#F0A090" opacity=".3"/>
+        </svg>
+      </div>
+      <div class="av-info">
+        <p class="av-role">Look 02</p>
+        <p class="av-name-card">Mannequin</p>
+      </div>
+    </div>
+
+    <!-- Look 03 Afro court -->
+    <div class="av-card" onclick="selectAv(2,this)">
+      <div class="av-figure">
+        <svg viewBox="0 0 90 200" width="90" height="200">
+          <rect x="32" y="118" width="26" height="55" rx="4" fill="#5C3018"/>
+          <rect x="14" y="118" width="14" height="40" rx="4" fill="#5C3018"/>
+          <rect x="62" y="118" width="14" height="40" rx="4" fill="#5C3018"/>
+          <path d="M24 105 Q45 115 66 105 L66 118 Q45 125 24 118Z" fill="#4E2810"/>
+          <rect x="39" y="88" width="12" height="18" rx="3" fill="#6B3820"/>
+          <ellipse cx="45" cy="74" rx="17" ry="20" fill="#6B3820"/>
+          <path class="av-cap"   id="av2b"  d="M28 67 C28 51,35 44,45 44 C55 44,62 51,62 67Z" fill="#2B4B8C"/>
+          <path class="av-brim1" id="av2r1" d="M28 67 Q45 71 62 67 L64 70 Q45 75 26 70Z" fill="#1E3567"/>
+          <path class="av-brim2" id="av2r2" d="M26 70 Q45 75 64 70 Q69 70 70 73 Q45 79 20 73 Q21 70 26 70Z" fill="#172B55"/>
+          <circle cx="45" cy="45" r="3" fill="#D4B896"/>
+          <text x="45" y="63" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Georgia,serif">LA</text>
+          <path d="M28 66 Q20 72 22 80 Q24 86 30 87" stroke="#1a0800" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M62 66 Q70 72 68 80 Q66 86 60 87" stroke="#1a0800" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="38" cy="77" rx="2.2" ry="1.6" fill="#0d0500" opacity=".9"/>
+          <ellipse cx="52" cy="77" rx="2.2" ry="1.6" fill="#0d0500" opacity=".9"/>
+          <path d="M39 84 Q45 88 51 84" stroke="#6B2A18" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M43 78 Q45 82 47 78" stroke="#3a1808" stroke-width="1.2" fill="none"/>
+        </svg>
+      </div>
+      <div class="av-info">
+        <p class="av-role">Look 03</p>
+        <p class="av-name-card">Afro court</p>
+      </div>
+    </div>
+
+    <!-- Look 04 Français classique -->
+    <div class="av-card" onclick="selectAv(3,this)">
+      <div class="av-figure">
+        <svg viewBox="0 0 90 200" width="90" height="200">
+          <rect x="30" y="118" width="30" height="55" rx="4" fill="#D5C8B5"/>
+          <rect x="12" y="118" width="15" height="42" rx="5" fill="#D5C8B5"/>
+          <rect x="63" y="118" width="15" height="42" rx="5" fill="#D5C8B5"/>
+          <path d="M22 108 Q45 116 68 108 L68 118 Q45 126 22 118Z" fill="#C8B8A0"/>
+          <rect x="39" y="90" width="12" height="19" rx="3" fill="#D8C0A0"/>
+          <rect x="27" y="62" width="36" height="40" rx="10" fill="#E8C898"/>
+          <path class="av-cap"   id="av3b"  d="M27 68 C27 53,34 46,45 46 C56 46,63 53,63 68Z" fill="#2B4B8C"/>
+          <path class="av-brim1" id="av3r1" d="M27 68 Q45 72 63 68 L65 71 Q45 76 25 71Z" fill="#1E3567"/>
+          <path class="av-brim2" id="av3r2" d="M25 71 Q45 76 65 71 Q70 71 71 74 Q45 80 19 74 Q20 71 25 71Z" fill="#172B55"/>
+          <circle cx="45" cy="47" r="3" fill="#D4B896"/>
+          <text x="45" y="65" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Georgia,serif">LA</text>
+          <path d="M27 67 Q22 72 24 78" stroke="#6B4828" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M63 67 Q68 72 66 78" stroke="#6B4828" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="38" cy="76" rx="2.2" ry="1.5" fill="#3C2C20" opacity=".85"/>
+          <ellipse cx="52" cy="76" rx="2.2" ry="1.5" fill="#3C2C20" opacity=".85"/>
+          <path d="M35 72 Q38 70 41 72" stroke="#4A3020" stroke-width="1.8" fill="none"/>
+          <path d="M49 72 Q52 70 55 72" stroke="#4A3020" stroke-width="1.8" fill="none"/>
+          <path d="M44 77 L44 83 Q45 84 46 83 L46 77" stroke="#C4906A" stroke-width="1.2" fill="none"/>
+          <path d="M39 88 Q45 91 51 88" stroke="#B4806A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="45" cy="90" rx="11" ry="5" fill="#C49878" opacity=".2"/>
+        </svg>
+      </div>
+      <div class="av-info">
+        <p class="av-role">Look 04</p>
+        <p class="av-name-card">Classique</p>
+      </div>
+    </div>
+
+    <!-- Look 05 Femme africaine tresses -->
+    <div class="av-card" onclick="selectAv(4,this)">
+      <div class="av-figure">
+        <svg viewBox="0 0 90 200" width="90" height="200">
+          <rect x="33" y="118" width="24" height="55" rx="4" fill="#8B4A20"/>
+          <rect x="15" y="118" width="12" height="40" rx="4" fill="#8B4A20"/>
+          <rect x="63" y="118" width="12" height="40" rx="4" fill="#8B4A20"/>
+          <path d="M25 106 Q45 116 65 106 L65 118 Q45 125 25 118Z" fill="#7A3E18"/>
+          <rect x="39" y="89" width="12" height="18" rx="3" fill="#8B4A20"/>
+          <ellipse cx="45" cy="74" rx="17" ry="20" fill="#8B4A20"/>
+          <path class="av-cap"   id="av4b"  d="M28 67 C28 51,35 44,45 44 C55 44,62 51,62 67Z" fill="#2B4B8C"/>
+          <path class="av-brim1" id="av4r1" d="M28 67 Q45 71 62 67 L64 70 Q45 75 26 70Z" fill="#1E3567"/>
+          <path class="av-brim2" id="av4r2" d="M26 70 Q45 75 64 70 Q69 70 70 73 Q45 79 20 73 Q21 70 26 70Z" fill="#172B55"/>
+          <circle cx="45" cy="45" r="3" fill="#D4B896"/>
+          <text x="45" y="63" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Georgia,serif">LA</text>
+          <path d="M28 66 Q16 82 18 108 Q18 120 20 135" stroke="#2A1808" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M30 67 Q14 86 16 115 Q16 128 17 148" stroke="#332010" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M32 67 Q20 90 22 118 Q22 130 23 155" stroke="#2A1808" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M62 66 Q74 82 72 108 Q72 120 70 135" stroke="#2A1808" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M60 67 Q76 86 74 115 Q74 128 73 148" stroke="#332010" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M58 67 Q70 90 68 118 Q68 130 67 155" stroke="#2A1808" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M34 67 Q26 95 27 128" stroke="#221008" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M56 67 Q64 95 63 128" stroke="#221008" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="38" cy="78" rx="2.2" ry="1.6" fill="#1a0800" opacity=".9"/>
+          <ellipse cx="52" cy="78" rx="2.2" ry="1.6" fill="#1a0800" opacity=".9"/>
+          <path d="M36 75 Q38 73 40 75" stroke="#0d0500" stroke-width="1.5" fill="none"/>
+          <path d="M50 75 Q52 73 54 75" stroke="#0d0500" stroke-width="1.5" fill="none"/>
+          <path d="M39 85 Q45 89 51 85" stroke="#B45A50" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <circle cx="27" cy="82" r="2" fill="#C4A44A"/>
+          <circle cx="63" cy="82" r="2" fill="#C4A44A"/>
+        </svg>
+      </div>
+      <div class="av-info">
+        <p class="av-role">Look 05</p>
+        <p class="av-name-card">Tresses</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="av-result">
+    <strong id="av-result-title"></strong>
+    <span id="av-result-text"></span>
+  </div>
+</section>
+
+<!-- DROP COUNTDOWN -->
+<section id="drop" class="reveal">
+  <p class="label" style="color:#3a6a4e;">Prochaine drop</p>
+  <h2 class="drop-title">DROP 002 — <em>The Crowns</em></h2>
+  <p class="drop-sub">Plus que</p>
+  <div class="countdown">
+    <div class="cd-block"><span class="cd-num" id="cd-d">12</span><span class="cd-unit">Jours</span></div>
+    <div class="cd-block"><span class="cd-num" id="cd-h">08</span><span class="cd-unit">Heures</span></div>
+    <div class="cd-block"><span class="cd-num" id="cd-m">34</span><span class="cd-unit">Minutes</span></div>
+    <div class="cd-block"><span class="cd-num" id="cd-s">17</span><span class="cd-unit">Secondes</span></div>
+  </div>
+  <div class="notify-wrap">
+    <input type="email" id="notify-email" placeholder="ton@email.com" class="notify-input"/>
+    <button class="btn-ghost" onclick="subscribe()">Me notifier</button>
+  </div>
+  <p id="notify-confirm" class="notify-confirm"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 KYMIA®</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/kymia.store" target="_blank">Instagram</a>
+    <a href="#" target="_blank">Vinted</a>
+    <a href="mailto:contact@kymia.store">Contact</a>
+  </div>
+  <p class="footer-loc">Paris, France</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
